@@ -1,1 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Dr. Niraj K. Nagrale | Academic & Research Profile</title>
+
+    <meta name="description"
+          content="Academic and research profile of Dr. Niraj K. Nagrale, Assistant Professor in Electronics & Telecommunication Engineering.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        /* ---------- NAVIGATION ---------- */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0f172a;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        /* ---------- HERO ---------- */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 8%;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 12px;
+        }
+
+        .hero h2 {
+            font-size: 23px;
+            font-weight: normal;
+            color: #bae6fd;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 18px;
+            color: #e2e8f0;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 6px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        .btn-primary:hover {
+            background: white;
+        }
+
+        .btn-outline {
+            border: 1px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0f172a;
+        }
+
+        /* ---------- GENERAL ---------- */
+
+        section {
+            padding: 75px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 34px;
+            color: #0f172a;
+        }
+
+        .section-title p {
+            color: #64748b;
+            margin-top: 8px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* ---------- ABOUT ---------- */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+        }
+
+        .about-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #2563eb;
+        }
+
+        .about-card h3 {
+            margin-bottom: 15px;
+            color: #1e3a8a;
+        }
+
+        /* ---------- RESEARCH ---------- */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.3s;
+        }
+
+        .research-card:hover {
+            transform: translateY(-7px);
+        }
+
+        .research-card .icon {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .research-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- HIGHLIGHTS ---------- */
+
+        .highlights {
+            background: #eff6ff;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat {
+            background: white;
+            padding: 30px 15px;
+            border-radius: 12px;
+        }
+
+        .stat h3 {
+            font-size: 35px;
+            color: #2563eb;
+        }
+
+        .stat p {
+            color: #475569;
+        }
+
+        /* ---------- PUBLICATIONS ---------- */
+
+        .publication {
+            background: white;
+            padding: 25px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            border-left: 4px solid #2563eb;
+        }
+
+        .publication h3 {
+            color: #1e3a8a;
+            margin-bottom: 8px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        /* ---------- PATENTS ---------- */
+
+        .patents {
+            background: #f8fafc;
+        }
+
+        .patent-card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .patent-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- PROJECTS ---------- */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .project-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+
+        /* ---------- TEACHING ---------- */
+
+        .teaching {
+            background: #eff6ff;
+        }
+
+        .subject-list {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .subject-list li {
+            background: white;
+            margin-bottom: 10px;
+            padding: 14px 20px;
+            border-radius: 7px;
+            list-style: none;
+        }
+
+        /* ---------- CONTACT ---------- */
+
+        .contact {
+            background: #0f172a;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        /* ---------- FOOTER ---------- */
+
+        footer {
+            background: #020617;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        /* ---------- MOBILE ---------- */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 18px;
+            }
+
+            .about-grid,
+            .research-grid,
+            .project-grid,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 55px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <div class="logo">
+        Dr. Niraj K. Nagrale
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#patents">Patents</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>Dr. Niraj K. Nagrale</h1>
+
+        <h2>
+            Assistant Professor | Electronics & Telecommunication Engineering
+        </h2>
+
+        <p>
+            G H Raisoni College of Engineering, Nagpur
+        </p>
+
+        <p style="margin-top:15px;">
+            Researcher • Educator • Innovator
+        </p>
+
+        <div class="buttons">
+
+            <a href="#about" class="btn btn-primary">
+                View My Profile
+            </a>
+
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>About Me</h2>
+
+            <p>
+                Academic Profile & Professional Journey
+            </p>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>Professional Profile</h3>
+
+                <p>
+                    Dr. Niraj K. Nagrale is an Assistant Professor in the
+                    Department of Electronics & Telecommunication Engineering
+                    at G H Raisoni College of Engineering, Nagpur.
+                </p>
+
+                <br>
+
+                <p>
+                    His academic and research interests include Artificial
+                    Intelligence, Deep Learning, Ear Biometrics, Image
+                    Processing, Digital Signal Processing, Computer Vision
+                    and Internet of Things.
+                </p>
+
+            </div>
+
+            <div class="about-card">
+
+                <h3>Academic Qualifications</h3>
+
+                <p>
+                    <strong>Ph.D.</strong><br>
+                    Design of an Efficient Ear Biometrics Model Using
+                    Deep Learning Architecture
+                </p>
+
+                <br>
+
+                <p>
+                    <strong>M.Tech.</strong> – Electronics & Communication Engineering
+                </p>
+
+                <p>
+                    <strong>M.Tech.</strong> – Energy Management System
+                </p>
+
+                <p>
+                    <strong>B.E.</strong> – Electronics Engineering
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RESEARCH ================= -->
+
+<section id="research">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Research Interests</h2>
+
+            <p>
+                Areas of research and innovation
+            </p>
+
+        </div>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+                <div class="icon">🤖</div>
+                <h3>Artificial Intelligence</h3>
+                <p>
+                    Machine Learning, Deep Learning and intelligent systems.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="icon">👂</div>
+                <h3>Ear Biometrics</h3>
+                <p>
+                    Ear detection, recognition and biometric authentication.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="icon">👁️</div>
+                <h3>Computer Vision</h3>
+                <p>
+                    Image analysis, object detection and visual recognition.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="icon">📡</div>
+                <h3>Signal Processing</h3>
+                <p>
+                    Digital signal processing and communication systems.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="icon">🌐</div>
+                <h3>IoT & Smart Systems</h3>
+                <p>
+                    IoT-based monitoring, automation and intelligent systems.
+                </p>
+            </div>
+
+            <div class="research-card">
+                <div class="icon">🔐</div>
+                <h3>Biometric Security</h3>
+                <p>
+                    Secure authentication and biometric identification.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HIGHLIGHTS ================= -->
+
+<section class="highlights">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Academic Highlights</h2>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="stat">
+                <h3>25+</h3>
+                <p>Years of Teaching Experience</p>
+            </div>
+
+            <div class="stat">
+                <h3>100+</h3>
+                <p>Projects Guided</p>
+            </div>
+
+            <div class="stat">
+                <h3>4+</h3>
+                <p>Published Patents</p>
+            </div>
+
+            <div class="stat">
+                <h3>Ph.D.</h3>
+                <p>Doctoral Research</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PUBLICATIONS ================= -->
+
+<section id="publications">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Selected Publications</h2>
+
+            <p>
+                Research contributions and scholarly publications
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Robust Ear Biometric Recognition System Using Advanced
+                Deep Learning Techniques
+            </h3>
+
+            <p>
+                Research work focusing on robust ear biometric recognition
+                using modern deep learning approaches.
+            </p>
+
+            <span class="tag">Ear Biometrics</span>
+            <span class="tag">Deep Learning</span>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Enhancing Ear Detection for Biometric Systems Using YOLOv9
+            </h3>
+
+            <p>
+                Application of YOLOv9 for efficient ear detection in
+                biometric systems.
+            </p>
+
+            <span class="tag">YOLOv9</span>
+            <span class="tag">Computer Vision</span>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Deep Learning Approaches for Ear Biometrics:
+                A Novel Approach
+            </h3>
+
+            <p>
+                Study of deep learning techniques for ear-based
+                biometric identification.
+            </p>
+
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Biometrics</span>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                IoT Based Smart Food Grain Warehouse
+            </h3>
+
+            <p>
+                IoT-based monitoring and security system for modern
+                food grain storage.
+            </p>
+
+            <span class="tag">IoT</span>
+            <span class="tag">Smart Agriculture</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PATENTS ================= -->
+
+<section class="patents" id="patents">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Patents & Intellectual Property</h2>
+
+            <p>
+                Innovation and technology contributions
+            </p>
+
+        </div>
+
+
+        <div class="patent-card">
+
+            <h3>
+                Advanced Ear Biometrics Authentication Using
+                EfficientNet CNN for Enhanced Security
+            </h3>
+
+            <p>
+                <strong>Indian Patent Publication No.:</strong>
+                202421069667
+            </p>
+
+            <p>
+                <strong>Publication Date:</strong>
+                25 October 2024
+            </p>
+
+            <span class="tag">Indian Patent</span>
+
+        </div>
+
+
+        <div class="patent-card">
+
+            <h3>
+                Other Published Patents
+            </h3>
+
+            <p>
+                Additional patents and intellectual property
+                contributions will be listed here.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Research & Project Work</h2>
+
+            <p>
+                Selected academic and applied technology projects
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <div class="project-card">
+
+                <h3>
+                    Smart Food Grain Warehouse
+                </h3>
+
+                <p>
+                    IoT-based environmental monitoring and security
+                    system using sensors and NodeMCU.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Ear Biometrics System
+                </h3>
+
+                <p>
+                    Deep learning based ear detection and biometric
+                    authentication using EfficientNet and YOLO.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>
+                    Smart IoT Systems
+                </h3>
+
+                <p>
+                    Development of low-cost IoT-based monitoring,
+                    automation and intelligent systems.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TEACHING ================= -->
+
+<section class="teaching" id="teaching">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Teaching</h2>
+
+            <p>
+                Courses and areas of academic expertise
+            </p>
+
+        </div>
+
+        <ul class="subject-list">
+
+            <li>
+                Advanced Digital Communication
+            </li>
+
+            <li>
+                Digital Signal Processing
+            </li>
+
+            <li>
+                Antennas & Wave Propagation
+            </li>
+
+            <li>
+                Electromagnetics Theory
+            </li>
+
+            <li>
+                Microwave & Antennas
+            </li>
+
+            <li>
+                Satellite Communication
+            </li>
+
+            <li>
+                Signal Processing & Communication Systems
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Contact</h2>
+
+            <p>
+                Academic collaboration, research and professional enquiries
+            </p>
+
+        </div>
+
+        <p>
+            <strong>Dr. Niraj K. Nagrale</strong>
+        </p>
+
+        <p>
+            Assistant Professor
+        </p>
+
+        <p>
+            Department of Electronics & Telecommunication Engineering
+        </p>
+
+        <p>
+            G H Raisoni College of Engineering, Nagpur
+        </p>
+
+        <br>
+
+        <p>
+            Email:
+            <a href="mailto:YOUR_EMAIL@example.com">
+                YOUR_EMAIL@example.com
+            </a>
+        </p>
+
+        <br>
+
+        <p>
+            Professional profiles and research links will be added here.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    © 2026 Dr. Niraj K. Nagrale.
+    All Rights Reserved.
+
+</footer>
+
+</body>
+</html>
