@@ -529,7 +529,69 @@ footer {
     padding: 22px;
     font-size: 14px;
 }
+/* ================= EVENTS & MOMENTS ================= */
 
+.events-section {
+    padding: 80px 0;
+    background: #f8fafc;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.event-card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.event-placeholder {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eaf1f8;
+    font-size: 55px;
+}
+
+.event-card h3 {
+    margin: 20px 15px 10px;
+    font-size: 20px;
+}
+
+.event-card p {
+    margin: 0 18px 25px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 1000px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .events-section {
+        padding: 60px 0;
+    }
+}
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
@@ -1506,71 +1568,6 @@ LinkedIn
 </div>
 
 </section>
-/* ================= EVENTS & MOMENTS ================= */
-
-.events-section {
-    padding: 80px 0;
-    background: #f8fafc;
-}
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-top: 40px;
-}
-
-.event-card {
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.event-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-.event-placeholder {
-    height: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #eaf1f8;
-    font-size: 55px;
-}
-
-.event-card h3 {
-    margin: 20px 15px 10px;
-    font-size: 20px;
-}
-
-.event-card p {
-    margin: 0 18px 25px;
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Responsive layout */
-
-@media (max-width: 1000px) {
-    .events-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .events-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .events-section {
-        padding: 60px 0;
-    }
-}
 
 <!-- ================= FOOTER ================= -->
 
